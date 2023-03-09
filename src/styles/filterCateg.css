@@ -1,0 +1,13 @@
+.filterCateg {
+  width: 100vw;
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 20px; */
+}
+
+#categ1 {
+  width: 30%;
+  height: 40px;
+  background-color: aqua;
+}

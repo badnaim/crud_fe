@@ -1,5 +1,5 @@
-import React from 'react';
-import Table from 'react-bootstrap/Table';
+import React from "react";
+import Table from "react-bootstrap/Table";
 
 export default function AllProduct() {
   return (
@@ -20,11 +20,11 @@ export default function AllProduct() {
           <tr>
             <td>URL</td>
             <td>Iphone 13 pro</td>
-            <th>3.500.000</th>
-            <th>Apple</th>
-            <th>Phone</th>
-            <th>10%</th>
-            <th>Edit/Delete</th>
+            <td>3.500.000</td>
+            <td>Apple</td>
+            <td>Phone</td>
+            <td>10%</td>
+            <td>Edit/Delete</td>
           </tr>
         </tbody>
       </Table>

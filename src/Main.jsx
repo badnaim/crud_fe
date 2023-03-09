@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import Header from "./components/Header";
 import { Routes, Route } from "react-router-dom";
 import AllProduct from "./components/buttons/AllProduct";
@@ -21,3 +21,22 @@ export default function Main() {
     </div>
   );
 }
+
+// const btnNames = [
+//   {name: "", value: ""},
+
+// ]
+
+// const [current, setCurrent] = useState("localStorage.getItem("btnVal") || "all")
+
+// function currentStateHandler (val) {
+//   setCurrent(val);
+//   localStorage.setItem("btnVal", val);
+// }
+
+// {btnNames.map((btn, index) => {
+//   <button key={index} onClick={() => setCurrent(btn.value)} className={current === btn.value ? "activeBtn" : "inactiveBtn"}>
+//     {btn.name}
+//   </button>
+//   <div>{current}</div>
+// })}

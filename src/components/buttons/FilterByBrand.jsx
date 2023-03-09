@@ -1,9 +1,5 @@
-import React from 'react';
+import React from "react";
 
 export default function FilterByBrand() {
-  return (
-    <div>
-      filterByBrand
-    </div>
-  );
+  return <div></div>;
 }
