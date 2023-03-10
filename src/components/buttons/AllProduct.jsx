@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Table from "react-bootstrap/Table";
+import { useState } from "react";
+import axios from "axios";
 
 export default function AllProduct() {
+  const [data, setData] = useState();
+
+  useEffect(() => {
+    axios.get("http://localhost:4000/products").then((res) => {
+      setData(res.data);
+      console.log(res.data);
+    });
+  }, []);
+
   return (
     <div>
       <Table striped>
@@ -17,15 +28,17 @@ export default function AllProduct() {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>URL</td>
-            <td>Iphone 13 pro</td>
-            <td>3.500.000</td>
-            <td>Apple</td>
-            <td>Phone</td>
-            <td>10%</td>
-            <td>Edit/Delete</td>
-          </tr>
+          {data.map((product, index) => (
+            <tr key={index}>
+              <td>{product.image}</td>
+              <td>{product.name}</td>
+              <td>{product.price}</td>
+              <td>{product.brand_id}</td>
+              <td>{product.category_id}</td>
+              <td>{product.sale}</td>
+              <td>Edit/Delete</td>
+            </tr>
+          ))}
         </tbody>
       </Table>
     </div>

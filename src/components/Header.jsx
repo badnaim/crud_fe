@@ -6,10 +6,11 @@ import "../styles/header.css";
 export default function Header() {
   const navigate = useNavigate();
   const [active, setActive] = useState(localStorage.getItem("btnVal") || "all");
-  // useEffect(() => )
+
   return (
-    <div>
+    <div className="header">
       <button
+        id="btn"
         onClick={() => {
           navigate("/");
           setActive("all");
@@ -20,6 +21,7 @@ export default function Header() {
         All product
       </button>
       <button
+        id="btn"
         onClick={() => {
           navigate("/loadMore");
           setActive("load");
@@ -30,6 +32,7 @@ export default function Header() {
         Load more
       </button>
       <button
+        id="btn"
         onClick={() => {
           navigate("/filterByCategory");
           setActive("filterC");
@@ -42,6 +45,7 @@ export default function Header() {
         Filter by category
       </button>
       <button
+        id="btn"
         onClick={() => {
           navigate("/filterByBrand");
           setActive("filterB");
@@ -54,6 +58,7 @@ export default function Header() {
         Filter by brand
       </button>
       <button
+        id="btn"
         onClick={() => {
           navigate("/addProduct");
           setActive("addP");
